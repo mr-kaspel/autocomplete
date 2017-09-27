@@ -1,0 +1,98 @@
+// gulp-sass
+
+$font-stock: 'Segoe UI'
+$font-color: #404040
+
+body
+	font: 14px $font-stock
+	color: $font-color
+	line-height: 20px
+	height: 200vh
+
+input
+	&:focus
+		border: 2px solid #5199db
+		outline: none
+
+.form
+	margin: 10em auto
+	text-align: center
+
+#aut,
+#autocomplete
+	border: 1px solid #dbdbdb
+	border-width: 1px
+	width: 265px
+	height: 15px
+	padding: 7px
+	position: relative
+	z-index: 2
+	&:focus
+		border: 2px solid #5199db
+	&:active
+		border: 2px solid #5199db
+
+#list
+	width: 321px
+	top: 38px
+	padding: 0px
+	position: absolute
+	overflow: auto
+	border: 1px solid #dbdbdb
+	box-shadow: 0 0 20px rgba(0,0,0,0.1)
+	z-index: 1
+	display: none
+	&::-webkit-scrollbar
+		width: 6px
+		height: 6px
+	&::-webkit-scrollbar-thumb
+		width: 6px
+		background-color: #dbdbdb
+		border-radius: 6px
+	&:focus
+		border: 2px solid #5199db
+		outline: none
+	li
+		list-style-type: none
+		text-align: left
+		padding: 4px 7px
+		&:focus
+			background: #5199db
+			color: #fff
+
+@keyframes loader
+	0% 
+		transform: rotateZ(0deg)
+	25%
+		transform: rotateZ(90deg)
+	50%
+		transform: rotateZ(180deg)
+	75%
+		transform: rotateZ(270g)
+	100%
+		transform: rotateZ(360deg)
+
+.load
+	float: left
+	margin: .2em
+	width: 10px
+	height: 10px
+	vertical-align: all
+	border-top: 2px solid #fff
+	border-right: 2px solid #a0a0a0
+	border-bottom: 2px solid #a0a0a0
+	border-left: 2px solid #a0a0a0
+	border-radius: 50%
+	animation: loader 2s infinite linear
+
+li
+	.inf
+		color: #a0a0a0
+p
+	margin: auto
+	&#eror
+		color: #f69c00
+		text-align: left
+
+.numb
+	margin: 10em auto
