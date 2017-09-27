@@ -158,6 +158,13 @@ autocomplete.addEventListener('focus', function(){
 
 });
 
+autocomplete.addEventListener('mouseover', function(){
+	ymaps.ready(function() {
+		var youcity = ymaps.geolocation.city;
+		autocomplete.placeholder = "Возможно " + String(youcity);
+	});
+});
+
 list.addEventListener('keydown', function(){
 
 	var numActiveItem = document.activeElement.tabIndex;
